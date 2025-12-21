@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>[[PARTNER 1]] & [[PARTNER 2]] - Wedding</title>
+  <meta name="description" content="Wedding celebration of [[PARTNER 1]] and [[PARTNER 2]] on [[DATE]] in [[TOWN, STATE]]">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="/" class="site-logo">[[P1]] & [[P2]]</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/schedule/">Schedule</a></li>
+          <li><a href="/travel/">Travel</a></li>
+          <li><a href="/things-to-do/">Things to Do</a></li>
+          <li><a href="/registry/">Registry</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/rsvp/" class="nav-rsvp-btn">RSVP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <h1 class="hero-names">[[PARTNER 1]] & [[PARTNER 2]]</h1>
+      <p class="hero-date">[[DATE]]</p>
+      <p class="hero-location">[[TOWN, STATE]]</p>
+      
+      <p class="welcome-message">
+        [[Welcome message placeholder: We're so excited to celebrate with you! 
+        Add your personal welcome note here.]]
+      </p>
+    </section>
+
+    <!-- CTA Buttons -->
+    <section class="cta-grid">
+      <a href="/rsvp/" class="cta-btn primary">RSVP</a>
+      <a href="/schedule/" class="cta-btn secondary">Schedule</a>
+      <a href="/travel/" class="cta-btn secondary">Travel + Lodging</a>
+      <a href="/registry/" class="cta-btn secondary">Registry</a>
+    </section>
+
+    <!-- RSVP Deadline Callout -->
+    <section class="deadline-callout">
+      <p><strong>Please RSVP by [[RSVP_DEADLINE]]</strong></p>
+      <p>We can't wait to celebrate with you!</p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-contact">
+        Questions? Contact us at <a href="mailto:[[CONTACT_EMAIL]]">[[CONTACT_EMAIL]]</a>
+      </p>
+      <p class="footer-updated">Last updated: [[LAST_UPDATED_DATE]]</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+    
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('active');
+      navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close nav when clicking a link (mobile)
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

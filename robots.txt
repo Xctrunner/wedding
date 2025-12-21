@@ -1,0 +1,3 @@
+# Discourage search engines from indexing this private wedding site
+User-agent: *
+Disallow: /

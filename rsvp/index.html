@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>RSVP - [[PARTNER 1]] & [[PARTNER 2]] Wedding</title>
+  <link rel="stylesheet" href="../css/styles.css">
+  <style>
+    /* Responsive Google Form iframe */
+    .google-form-wrapper {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    
+    .google-form-wrapper iframe {
+      width: 100%;
+      min-height: 900px;
+      border: none;
+      background: white;
+    }
+    
+    @media (max-width: 600px) {
+      .google-form-wrapper iframe {
+        min-height: 1000px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="/" class="site-logo">[[P1]] & [[P2]]</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule/">Schedule</a></li>
+          <li><a href="/travel/">Travel</a></li>
+          <li><a href="/things-to-do/">Things to Do</a></li>
+          <li><a href="/registry/">Registry</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/rsvp/" class="nav-rsvp-btn active">RSVP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="page-header">
+      <h1>RSVP</h1>
+      <p class="page-subtitle">We can't wait to celebrate with you!</p>
+    </div>
+
+    <!-- RSVP Note -->
+    <section class="rsvp-note">
+      <p><strong>Please RSVP by [[RSVP_DEADLINE]]</strong></p>
+      <p class="mt-sm text-muted">
+        Need to update your RSVP after submitting? No problem!<br>
+        Just email us at <a href="mailto:[[CONTACT_EMAIL]]">[[CONTACT_EMAIL]]</a>
+      </p>
+    </section>
+
+    <!-- Google Form Embed -->
+    <section class="form-container">
+      <div class="google-form-wrapper">
+        <!-- TODO: paste Google Form embed link -->
+        <!-- 
+          To add your Google Form:
+          1. Open your Google Form
+          2. Click "Send" button
+          3. Click the embed icon (<>)
+          4. Copy the src URL from the iframe code
+          5. Replace the placeholder URL below
+          
+          Example:
+          <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true">Loading…</iframe>
+        -->
+        <iframe 
+          src="[[GOOGLE_FORM_EMBED_URL]]"
+          title="RSVP Form"
+          loading="lazy">
+          Loading RSVP form…
+        </iframe>
+        
+        <!-- 
+          Fallback message if iframe doesn't load or for accessibility:
+          Uncomment if needed
+        -->
+        <!--
+        <noscript>
+          <p>
+            Having trouble viewing the form? 
+            <a href="[[GOOGLE_FORM_DIRECT_URL]]" target="_blank" rel="noopener">
+              Open the RSVP form in a new window →
+            </a>
+          </p>
+        </noscript>
+        -->
+      </div>
+    </section>
+
+    <!-- Trouble with form -->
+    <section class="content-section mt-lg">
+      <div class="info-box">
+        <h3>Having trouble with the form?</h3>
+        <p>
+          If the form isn't loading or you're having any issues, you can also:
+        </p>
+        <ul>
+          <li>
+            <a href="[[GOOGLE_FORM_DIRECT_URL]]" target="_blank" rel="noopener">
+              Open the form in a new window →
+            </a>
+          </li>
+          <li>
+            Email us directly at <a href="mailto:[[CONTACT_EMAIL]]">[[CONTACT_EMAIL]]</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-contact">
+        Questions? Contact us at <a href="mailto:[[CONTACT_EMAIL]]">[[CONTACT_EMAIL]]</a>
+      </p>
+      <p class="footer-updated">Last updated: [[LAST_UPDATED_DATE]]</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+    
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('active');
+      navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>

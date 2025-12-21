@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Schedule - [[PARTNER 1]] & [[PARTNER 2]] Wedding</title>
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="header-content">
+      <a href="/" class="site-logo">[[P1]] & [[P2]]</a>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="main-nav" id="main-nav">
+        <ul class="nav-list">
+          <li><a href="/">Home</a></li>
+          <li><a href="/schedule/" class="active">Schedule</a></li>
+          <li><a href="/travel/">Travel</a></li>
+          <li><a href="/things-to-do/">Things to Do</a></li>
+          <li><a href="/registry/">Registry</a></li>
+          <li><a href="/faq/">FAQ</a></li>
+          <li><a href="/rsvp/" class="nav-rsvp-btn">RSVP</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <div class="page-header">
+      <h1>Schedule</h1>
+      <p class="page-subtitle">[[DATE]] • [[TOWN, STATE]]</p>
+    </div>
+
+    <!-- Arrival Guidance -->
+    <section class="content-section">
+      <div class="info-box highlight">
+        <h3>📍 Arrival Guidance</h3>
+        <p><strong>Please arrive by [[ARRIVAL_TIME]]</strong> to find parking and get settled before the ceremony begins.</p>
+        <p>[[Additional arrival notes placeholder: e.g., "Look for signage directing you to parking."]]]</p>
+      </div>
+    </section>
+
+    <!-- Ceremony -->
+    <section class="content-section">
+      <h2>Ceremony</h2>
+      <div class="card">
+        <h3>[[CEREMONY_TIME]]</h3>
+        <p><strong>[[VENUE_NAME]]</strong></p>
+        <p>[[VENUE_ADDRESS]]</p>
+        <p class="text-muted mt-sm">
+          [[Ceremony notes placeholder: e.g., "The ceremony will be held outdoors, weather permitting. 
+          Please wear comfortable shoes suitable for grass/uneven ground."]]
+        </p>
+      </div>
+    </section>
+
+    <!-- Reception -->
+    <section class="content-section">
+      <h2>Reception</h2>
+      <div class="card">
+        <h3>[[RECEPTION_TIME]]</h3>
+        <p><strong>[[RECEPTION_VENUE_NAME]]</strong></p>
+        <p>[[RECEPTION_VENUE_ADDRESS]]</p>
+        <p class="text-muted mt-sm">
+          [[Reception notes placeholder: e.g., "Cocktail hour, dinner, dancing, and celebration! 
+          The reception will end around [[END_TIME]]."]]
+        </p>
+      </div>
+    </section>
+
+    <!-- Weekend Events (Optional) -->
+    <section class="content-section">
+      <h2>Weekend Events</h2>
+      <p class="text-muted mb-md">[[Note: Remove this section if you don't have additional events]]</p>
+      
+      <div class="card">
+        <h3>Welcome Drinks</h3>
+        <p><strong>[[WELCOME_DRINKS_DATE]] • [[WELCOME_DRINKS_TIME]]</strong></p>
+        <p>[[WELCOME_DRINKS_VENUE]]</p>
+        <p>[[WELCOME_DRINKS_ADDRESS]]</p>
+        <p class="text-muted mt-sm">
+          [[Welcome drinks description placeholder: e.g., "Join us for casual drinks the evening before. 
+          Drop by anytime! No RSVP needed."]]
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>Day-After Brunch</h3>
+        <p><strong>[[BRUNCH_DATE]] • [[BRUNCH_TIME]]</strong></p>
+        <p>[[BRUNCH_VENUE]]</p>
+        <p>[[BRUNCH_ADDRESS]]</p>
+        <p class="text-muted mt-sm">
+          [[Brunch description placeholder: e.g., "Stop by for coffee and pastries before you head out. 
+          We'd love to see you one more time!"]]
+        </p>
+      </div>
+
+      <!-- Add more events as needed -->
+      <!--
+      <div class="card">
+        <h3>After-Party</h3>
+        <p><strong>[[TIME]]</strong></p>
+        <p>[[VENUE]]</p>
+        <p class="text-muted mt-sm">[[Description]]</p>
+      </div>
+      -->
+    </section>
+
+    <!-- Parking -->
+    <section class="content-section">
+      <h2>Parking</h2>
+      <div class="info-box">
+        <p>
+          [[Parking notes placeholder: e.g., "Free parking is available on-site. Follow signs to the 
+          designated parking area. Handicap-accessible spots are located near the main entrance."]]
+        </p>
+        <p class="mt-sm">
+          [[Additional parking info: e.g., "If the main lot is full, overflow parking is available at 
+          [[OVERFLOW_LOCATION]]. A shuttle will run between lots."]]
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <p class="footer-contact">
+        Questions? Contact us at <a href="mailto:[[CONTACT_EMAIL]]">[[CONTACT_EMAIL]]</a>
+      </p>
+      <p class="footer-updated">Last updated: [[LAST_UPDATED_DATE]]</p>
+    </div>
+  </footer>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    const navToggle = document.querySelector('.nav-toggle');
+    const mainNav = document.querySelector('#main-nav');
+    
+    navToggle.addEventListener('click', () => {
+      const isOpen = mainNav.classList.toggle('active');
+      navToggle.classList.toggle('active');
+      navToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    mainNav.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  </script>
+</body>
+</html>
