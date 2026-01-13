@@ -13,14 +13,14 @@
       width: 100%;
       overflow: hidden;
     }
-    
+
     .google-form-wrapper iframe {
       width: 100%;
       min-height: 900px;
       border: none;
       background: white;
     }
-    
+
     @media (max-width: 600px) {
       .google-form-wrapper iframe {
         min-height: 1000px;
@@ -72,32 +72,32 @@
     <section class="form-container">
       <div class="google-form-wrapper">
         <!-- TODO: paste Google Form embed link -->
-        <!-- 
+        <!--
           To add your Google Form:
           1. Open your Google Form
           2. Click "Send" button
           3. Click the embed icon (<>)
           4. Copy the src URL from the iframe code
           5. Replace the placeholder URL below
-          
+
           Example:
           <iframe src="https://docs.google.com/forms/d/e/YOUR_FORM_ID/viewform?embedded=true">Loading…</iframe>
         -->
-        <iframe 
+        <iframe
           src="[[GOOGLE_FORM_EMBED_URL]]"
           title="RSVP Form"
           loading="lazy">
           Loading RSVP form…
         </iframe>
-        
-        <!-- 
+
+        <!--
           Fallback message if iframe doesn't load or for accessibility:
           Uncomment if needed
         -->
         <!--
         <noscript>
           <p>
-            Having trouble viewing the form? 
+            Having trouble viewing the form?
             <a href="[[GOOGLE_FORM_DIRECT_URL]]" target="_blank" rel="noopener">
               Open the RSVP form in a new window →
             </a>
@@ -142,7 +142,7 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const mainNav = document.querySelector('#main-nav');
-    
+
     navToggle.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('active');
       navToggle.classList.toggle('active');

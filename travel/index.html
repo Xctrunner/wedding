@@ -41,18 +41,20 @@
     <!-- Getting There -->
     <section class="content-section">
       <h2>Getting There</h2>
-      
+
       <div class="card">
         <h3>✈️ By Air</h3>
         <p><strong>Nearest Airports:</strong></p>
         <ul>
-          <li><strong>[[AIRPORT_1_CODE]] - [[AIRPORT_1_NAME]]</strong> — [[DRIVE_TIME_1]] drive to venue</li>
-          <li><strong>[[AIRPORT_2_CODE]] - [[AIRPORT_2_NAME]]</strong> — [[DRIVE_TIME_2]] drive to venue</li>
+          <li><strong>PWM - Portland International Jetport</strong> — 40 minute drive to venue</li>
+          <li><strong>BOS - Logan International Airport</strong> — 2 hour 15 minute drive to venue</li>
+          <li><strong>MHT - Manchester-Boston Regional Airport</strong> — 2 hour drive to venue</li>
           <!-- Add more airports as needed -->
         </ul>
         <p class="text-muted mt-sm">
-          [[Airport notes placeholder: e.g., "We recommend flying into [[AIRPORT_1_CODE]] for the 
-          shortest drive, though [[AIRPORT_2_CODE]] often has more flight options."]]
+          PWM will offer the shortest drive, but BOS will have more, cheaper flight options
+          with fewer layovers from airports around the country. MHT is another option if you want to
+          shop around.
         </p>
       </div>
 
@@ -60,13 +62,16 @@
         <h3>🚗 By Car</h3>
         <p><strong>Drive times from nearby cities:</strong></p>
         <ul>
-          <li>[[CITY_1]] — [[DRIVE_TIME_FROM_CITY_1]]</li>
-          <li>[[CITY_2]] — [[DRIVE_TIME_FROM_CITY_2]]</li>
-          <li>[[CITY_3]] — [[DRIVE_TIME_FROM_CITY_3]]</li>
+          <li>Downtown Brunswick — 15 minutes</li>
+          <li>Downtown Freeport - 15 minutes</li>
+          <li>Downtown Portland — 30-40 minutes</li>
+          <li>Boston/Camberville — 2 hour 15 minute drive</li>
         </ul>
         <p class="text-muted mt-sm">
-          [[Driving notes placeholder: e.g., "The venue is about 30 minutes from downtown. 
-          The last stretch is on winding mountain roads—take it easy!"]]
+          The drive from Portland and Boston is not bad, especially if you avoid commuter traffic.
+          The venue is on a dirt road off of Hacker Road. GPS should get you there just fine!
+          Once on the dirt road, Scatter Good Farm is the right fork.
+          Walter's parents' home is the left fork.
         </p>
       </div>
     </section>
@@ -74,7 +79,7 @@
     <!-- Lodging -->
     <section class="content-section">
       <h2>Where to Stay</h2>
-      
+
       <!-- Room Block (if applicable) -->
       <div class="info-box highlight">
         <h3>🏨 Room Block</h3>
@@ -90,7 +95,7 @@
         </p>
       </div>
 
-      <p class="mb-md">[[Lodging intro placeholder: e.g., "Here are some other options in the area, 
+      <p class="mb-md">[[Lodging intro placeholder: e.g., "Here are some other options in the area,
         ranging from budget-friendly to splurge-worthy."]]</p>
 
       <div class="card">
@@ -122,11 +127,11 @@
       <h2>Parking at the Venue</h2>
       <div class="info-box">
         <p>
-          [[Parking details placeholder: e.g., "Free parking is available at the venue. 
+          [[Parking details placeholder: e.g., "Free parking is available at the venue.
           The lot can accommodate approximately [[NUMBER]] vehicles. Arrive early for the best spots!"]]
         </p>
         <p class="mt-sm">
-          [[Additional parking notes: e.g., "Please do not park on the grass or block the driveway. 
+          [[Additional parking notes: e.g., "Please do not park on the grass or block the driveway.
           Handicap-accessible parking is available near the entrance."]]
         </p>
       </div>
@@ -135,17 +140,17 @@
     <!-- Transportation -->
     <section class="content-section">
       <h2>Getting Around</h2>
-      
+
       <div class="info-box warning">
         <h3>🚙 Transportation Expectations</h3>
         <p>
-          [[Transportation reality check placeholder: e.g., "Brunswick, Maine is a rural area with 
-          limited rideshare availability. Uber and Lyft exist but wait times can be 20-30+ minutes, 
+          [[Transportation reality check placeholder: e.g., "Brunswick, Maine is a rural area with
+          limited rideshare availability. Uber and Lyft exist but wait times can be 20-30+ minutes,
           especially late at night."]]
         </p>
         <p class="mt-sm">
-          <strong>Our recommendation:</strong> [[Transportation recommendation placeholder: e.g., 
-          "Plan to drive yourself or coordinate carpools with other guests. If you're staying at the 
+          <strong>Our recommendation:</strong> [[Transportation recommendation placeholder: e.g.,
+          "Plan to drive yourself or coordinate carpools with other guests. If you're staying at the
           hotel block, the drive to the venue is about 15 minutes."]]
         </p>
       </div>
@@ -153,8 +158,8 @@
       <div class="card">
         <h3>🚗 Carpooling Encouraged</h3>
         <p>
-          [[Carpool encouragement placeholder: e.g., "We encourage guests to coordinate rides! 
-          If you're flying in and renting a car, consider offering a ride to someone who isn't. 
+          [[Carpool encouragement placeholder: e.g., "We encourage guests to coordinate rides!
+          If you're flying in and renting a car, consider offering a ride to someone who isn't.
           Feel free to reach out to us and we can help connect guests traveling from similar areas."]]
         </p>
       </div>
@@ -177,9 +182,9 @@
   <footer class="site-footer">
     <div class="footer-content">
       <p class="footer-contact">
-        Questions? Contact us at <a href="mailto:[[CONTACT_EMAIL]]">[[CONTACT_EMAIL]]</a>
+        Questions? Contact us at <a href="mailto:waltmart.mail@gmail.com">waltmart.mail@gmail.com</a>
       </p>
-      <p class="footer-updated">Last updated: [[LAST_UPDATED_DATE]]</p>
+      <p class="footer-updated">Last updated: 2026/01/12</p>
     </div>
   </footer>
 
@@ -187,7 +192,7 @@
   <script>
     const navToggle = document.querySelector('.nav-toggle');
     const mainNav = document.querySelector('#main-nav');
-    
+
     navToggle.addEventListener('click', () => {
       const isOpen = mainNav.classList.toggle('active');
       navToggle.classList.toggle('active');
