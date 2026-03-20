@@ -523,6 +523,14 @@ main {
   transform: translateY(-2px);
 }
 
+.registry-card--full {
+  text-align: left;
+}
+
+.registry-card--full:hover {
+  transform: none;
+}
+
 .registry-card h3 {
   margin-bottom: var(--space-sm);
 }
@@ -704,6 +712,10 @@ main {
 
   .registry-links {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .registry-card--full {
+    grid-column: 1 / -1;
   }
 }
 
