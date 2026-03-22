@@ -1,0 +1,13 @@
+# Original HEIC photos (too large, converted to JPEG for web)
+couple_pictures/*.heic
+couple_pictures/*.HEIC
+
+# Video files
+couple_pictures/*.MP4
+couple_pictures/*.mp4
+
+# Oversized original JPEG (21 MB Pixel camera file)
+couple_pictures/PXL_20220111_002957860.MP.jpg
+
+# Local utility script
+convert_photos.py
