@@ -307,6 +307,15 @@ main {
   display: block;
 }
 
+/* On narrow screens the landscape image crops heavily at 75vh — use a width-
+   proportional height instead so the full image nearly fits, and anchor left
+   where faces are */
+@media (max-width: 600px) {
+  .hero-banner__img {
+    height: 60vw;
+  }
+}
+
 .hero-banner__overlay {
   position: absolute;
   bottom: 0;
